@@ -16,7 +16,7 @@
   },
   "require": {
     "phpoffice/phpexcel": "1.8.*"
-  }
+  },
   "autoload": {
     "psr-0": {
       "Zarganwar\\simple-phpexcel-reader\\": "src/"
