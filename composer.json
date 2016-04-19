@@ -1,0 +1,33 @@
+{
+  "name": "zarganwar/simple-phpexcel-reader",
+  "type": "library",
+  "description": "PHPExcel reader",
+  "keywords": ["PHPExcel", "reader"],
+  "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+  "authors": [
+    {
+      "name": "Martin Jirásek",
+      "email": "jertin@seznam.cz"
+    }
+  ],
+  "support": {
+    "email": "jertin@seznam.cz",
+    "issues": "https://github.com/Zarganwar/simple-phpexcel-reader/issues"
+  },
+  "require": {
+    "phpoffice/phpexcel": "1.8.*"
+  }
+  "autoload": {
+    "psr-0": {
+      "Zarganwar\\simple-phpexcel-reader\\": "src/"
+    },
+    "classmap": [
+      "src/Reader.php"
+    ]
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.0.1-dev"
+    }
+  }
+}
