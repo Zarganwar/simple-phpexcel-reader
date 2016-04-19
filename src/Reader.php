@@ -15,7 +15,7 @@ class Reader
     private $filename;
 
     /**
-     * @var PHPExcel
+     * @var \PHPExcel
      */
     private $phpExcel;
 
@@ -25,7 +25,7 @@ class Reader
     private $data = [];
 
     /**
-     * PHPExcelReader constructor.
+     * Reader constructor.
      * @param string $filename
      */
     public function __construct($filename)
@@ -34,11 +34,11 @@ class Reader
     }
 
     /**
-     * @throws PHPExcel_Reader_Exception
+     * @throws \PHPExcel_Reader_Exception
      */
     private function loadPhpExcel()
     {
-        $this->phpExcel = PHPExcel_IOFactory::createReader(PHPExcel_IOFactory::identify($this->filename))
+        $this->phpExcel = \PHPExcel_IOFactory::createReader(\PHPExcel_IOFactory::identify($this->filename))
             ->load($this->filename);
     }
 
@@ -58,7 +58,7 @@ class Reader
 
     /**
      * @param $fromRow
-     * @throws PHPExcel_Exception
+     * @throws \PHPExcel_Exception
      */
     private function loadData($fromRow)
     {
