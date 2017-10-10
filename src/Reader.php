@@ -55,7 +55,7 @@ class Reader
         }
         return $this->data;
     }
-    
+
 	/**
 	 * @param int $fromRow
 	 * @param bool $refresh
@@ -72,7 +72,7 @@ class Reader
 		$this->data = $assocData;
 		return $this->data;
 	}
-    
+
     /**
      * @param $fromRow
      * @throws \PHPExcel_Exception
