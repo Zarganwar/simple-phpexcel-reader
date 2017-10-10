@@ -3,7 +3,7 @@
 namespace SimplePHPExcelReader;
 /**
  * Created by IntelliJ IDEA.
- * User: Martin Jir·sek <martin.jirasek@nms.cz>
+ * User: Martin Jir√°sek <martin.jirasek@nms.cz>
  * Date: 19.04.2016
  * Time: 11:06
  */
@@ -55,7 +55,24 @@ class Reader
         }
         return $this->data;
     }
-
+    
+	/**
+	 * @param int $fromRow
+	 * @param bool $refresh
+	 * @return array
+	 */
+	public function readAssoc($fromRow = 1, $refresh = false, $omitHeader = false)
+	{
+		$data = $this->read($fromRow, $refresh);
+		$assocData = [];
+		$header = $omitHeader ? array_shift($data) : reset($data);
+		foreach ($data as $row) {
+			$assocData[] = array_combine($header, $row);
+		}
+		$this->data = $assocData;
+		return $this->data;
+	}
+    
     /**
      * @param $fromRow
      * @throws \PHPExcel_Exception
