@@ -83,7 +83,7 @@ class Reader
         $highestRow = $sheet->getHighestRow();
         $highestColumn = $sheet->getHighestColumn();
         for ($row = $fromRow; $row <= $highestRow; $row++) {
-            $data = $sheet->rangeToArray("A$row:$highestColumn" . $row, NULL, TRUE, FALSE);
+            $data = $sheet->rangeToArray("A$row:$highestColumn" . $row);
             $this->data[] = $data[0];
         }
     }
